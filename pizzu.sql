@@ -3,7 +3,7 @@ use pizza_sales
 
 select * from pizza
 
---What days and times do we tend to be busiest?--
+##--What days and times do we tend to be busiest?--
 
 select datename(weekday,order_date) days,count(distinct order_id) total_order,(count(distinct order_id)/count(distinct order_date)) avg_order_daily from pizza
 group by datename(weekday,order_date)
